@@ -1,0 +1,16 @@
+include ../button/button
+
+mixin documentItem(name,datename,date)
+	li.document-list__item
+		.document-list__info
+			svg(width="36" height="48").document-list__icon
+				use(xlink:href="/img/sprite.svg#big")
+			.document-list__description
+				h3.document-list__name=name
+				time(datetime=datename).document-list__date=date
+		+button('#','View document','document-list__button',true,true)
+
+ul.document-list
+	+documentItem('Rundofase','2020-08-08','Last Edited: 08/08/2020')
+	+documentItem('Genco Pura Olive Oil Company','2020-08-08','Last Edited: 08/08/2020')
+	+documentItem('Bubba Gump','2020-08-08','Last Edited: 08/08/2020')

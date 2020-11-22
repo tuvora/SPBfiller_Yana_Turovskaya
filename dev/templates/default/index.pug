@@ -1,0 +1,13 @@
+block variables
+
+doctype html
+html(lang="ru")
+	block head
+		head
+			meta(charset="utf-8")
+			title= pageTitle
+			meta(content="width=device-width, initial-scale=1" name="viewport")
+			link(rel="stylesheet" href="style.min.css")
+		body
+			section.documents
+				include ../../components/document-list/document-list

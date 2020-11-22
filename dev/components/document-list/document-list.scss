@@ -1,0 +1,56 @@
+@import '../../scss/variables/variables.scss';
+
+
+.document-list {
+	width: 100%;
+	max-width: 620px;
+}
+
+.document-list__item {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	min-height: 80px;
+	padding: 5px 24px;
+
+	border: 1px solid $border-color;
+
+	&:not(:first-child) {
+		margin-top: - 1px;
+	}
+}
+
+.document-list__info {
+	min-width: calc(100% - 120px);
+	flex-basis: 270px;
+	margin: 10px 0;
+	display: flex;
+	align-items: center;
+	white-space: nowrap;
+}
+
+.document-list__icon {
+	flex-shrink: 0;
+	margin-right: 12px;
+}
+
+
+
+.document-list__name {
+	font-size: 14px;
+	line-height: 1.43;
+	font-weight: 700;
+	color: $black-text-color;
+}
+
+.document-list__date {
+	font-size: 12px;
+	line-height: 1.67;
+	font-weight: 400;
+	color: $gray-text-color;
+}
+
+.document-list__button {
+	flex-grow: 1;
+	margin: 12px 0;
+}

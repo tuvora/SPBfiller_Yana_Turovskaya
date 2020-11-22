@@ -1,0 +1,65 @@
+@import '../../scss/variables/variables.scss';
+
+.button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-width: 120px;
+	padding: 8px 12px;
+
+	font-size: 12px;
+	line-height: 1.2;
+	font-weight: 700;
+	color: $black-text-color;
+
+	background: linear-gradient(180deg, #F5F5F5 0%, #E9E9E9 100%);
+	border: 1px solid #BFBFBF;
+	border-radius: 4px;
+
+	@media(hover: hover) and (pointer: fine) {
+		&:hover {
+			background: #F5F5F5;
+		}
+	}
+
+	&:active {
+		background: linear-gradient(180deg, #E9E9E9 0%, #F5F5F5 100%);
+	}
+
+	&[disabled] {
+		background: #F9F9F9;
+		pointer-events: none;
+		cursor: not-allowed;
+	}
+
+	&:focus {
+		box-shadow: 0px 0px 4px #BFBFBF;
+	}
+
+	&--colored {
+		color: #FFFFFF;
+
+		background: linear-gradient(180deg, #FFAE45 0%, #E88300 100%);
+		border-color: #E88300;
+
+		@media(hover: hover) and (pointer: fine) {
+			&:hover {
+				background: #FFA42E;
+			}
+		}
+
+		&:active {
+			background: linear-gradient(180deg, #E88300 0%, #FFAE45 100%);
+		}
+
+		&[disabled] {
+			background: #FFD8A5;
+			border-color: #FFB85C;
+		}
+
+		&:focus {
+			background: #FFA42E;
+			box-shadow: 0px 0px 4px #E88300;
+		}
+	}
+}

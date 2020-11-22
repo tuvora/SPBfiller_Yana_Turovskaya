@@ -1,0 +1,8 @@
+mixin button(link,name,className,colored,download)
+	if(colored)
+		if(download)
+			a(href=link download class="button button--colored " +className)= name
+		else 
+			a(href=link  class="button button--colored" +className)= name
+	else 
+		a(href=link  class="button" +className)= name 
